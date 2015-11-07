@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ylc-wl-Pc8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ylc-wl-Pc8">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,6 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="nAS-MJ-eKV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsM-Cv-Bbi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0V3-sM-ldh">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="tpd-Is-Yfl"/>
+                                        </constraints>
+                                        <items>
+                                            <navigationItem title="AppSales" id="SNT-cv-cua">
+                                                <barButtonItem key="leftBarButtonItem" systemItem="add" id="6Ts-N1-sbL"/>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QP5-YO-aIr"/>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHf-T2-M5j">
+                                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="RoL-Cj-bO9"/>
+                                        </constraints>
+                                        <items>
+                                            <barButtonItem title="Item" style="plain" id="5Ve-uu-5Ur">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="6Vg-LE-8Ez">
+                                                    <rect key="frame" x="20" y="11" width="22" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="svH-u8-cMC"/>
+                                            <barButtonItem title="Settings" id="uug-QM-R9T"/>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0V3-sM-ldh" firstAttribute="top" secondItem="hsM-Cv-Bbi" secondAttribute="top" id="GCU-j9-ij9"/>
+                                    <constraint firstItem="hHf-T2-M5j" firstAttribute="leading" secondItem="hsM-Cv-Bbi" secondAttribute="leading" id="g1U-ou-LCZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="hHf-T2-M5j" secondAttribute="trailing" id="ufg-XT-Ysn"/>
+                                    <constraint firstItem="0V3-sM-ldh" firstAttribute="leading" secondItem="hsM-Cv-Bbi" secondAttribute="leading" id="vD4-hX-1bd"/>
+                                    <constraint firstAttribute="trailing" secondItem="0V3-sM-ldh" secondAttribute="trailing" id="wTw-ET-E9v"/>
+                                    <constraint firstAttribute="bottom" secondItem="hHf-T2-M5j" secondAttribute="bottom" id="xYo-kz-yvu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hsM-Cv-Bbi" secondAttribute="trailing" id="6K5-u4-X5u"/>
+                            <constraint firstItem="hsM-Cv-Bbi" firstAttribute="leading" secondItem="nAS-MJ-eKV" secondAttribute="leading" id="KXO-H5-RyW"/>
+                            <constraint firstItem="hsM-Cv-Bbi" firstAttribute="top" secondItem="nAS-MJ-eKV" secondAttribute="top" id="dgz-JK-VXJ"/>
+                            <constraint firstItem="KA0-yU-0uX" firstAttribute="top" secondItem="hsM-Cv-Bbi" secondAttribute="bottom" id="lVP-Bv-cre"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jQ-Ot-6A1" userLabel="First Responder" sceneMemberID="firstResponder"/>
