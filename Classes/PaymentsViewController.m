@@ -21,7 +21,7 @@
 	if (self) {
 		account = [paymentAccount retain];
 		self.title = NSLocalizedString(@"Payments", nil);
-		self.tabBarItem.image = [UIImage imageNamed:@"Payments.png"];
+		self.tabBarItem.image = [UIImage imageNamed:@"Payments"];
 		self.hidesBottomBarWhenPushed = [[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad;
 		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deletePayments:)] autorelease];
 		if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {

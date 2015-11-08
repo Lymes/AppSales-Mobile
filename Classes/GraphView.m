@@ -38,7 +38,7 @@
 		scaleView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 		[self addSubview:scaleView];
 		
-		lockIndicatorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LockIndicator.png"]];
+		lockIndicatorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LockIndicator"]];
 		lockIndicatorView.frame = CGRectMake(15, 7, 16, 16);
 		lockIndicatorView.hidden = YES;
 		[self addSubview:lockIndicatorView];
@@ -68,7 +68,7 @@
 		
 		self.sectionLabelButton = [UIButton buttonWithType:UIButtonTypeCustom];
 		sectionLabelButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-		[self.sectionLabelButton setBackgroundImage:[UIImage imageNamed:@"DateButton.png"] forState:UIControlStateNormal];
+		[self.sectionLabelButton setBackgroundImage:[UIImage imageNamed:@"DateButton"] forState:UIControlStateNormal];
 		self.sectionLabelButton.frame = CGRectMake(0, self.bounds.size.height - 30 - 16, 46, 32);
 		self.sectionLabelButton.titleLabel.font = [UIFont boldSystemFontOfSize:10.0];
 		self.sectionLabelButton.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -141,7 +141,7 @@
 		
 		MBProgressHUD *hud = [[[MBProgressHUD alloc] initWithView:self] autorelease];
 		hud.animationType = MBProgressHUDAnimationZoom;
-		hud.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:(maxLocked) ? @"Lock.png" : @"Unlock.png"]] autorelease];
+		hud.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:(maxLocked) ? @"Lock" : @"Unlock"]] autorelease];
 		hud.mode = MBProgressHUDModeCustomView;
 		if (maxLocked) {
 			hud.labelText = NSLocalizedString(@"Scale locked", nil);

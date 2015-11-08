@@ -89,13 +89,13 @@
 	BOOL iPad = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad);
 	
 	statusVisible = [self shouldShowStatusBar];
-	self.topView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TopBackground.png"]] autorelease];
+	self.topView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TopBackground"]] autorelease];
 	topView.userInteractionEnabled = YES;
 	topView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	topView.frame = CGRectMake(0, 64.0, self.view.bounds.size.width, iPad ? 450.0 : (self.view.bounds.size.height - 44.0) * 0.5);
 	[self.view addSubview:topView];
 	
-	UIImageView *graphShadowView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ShadowBottom.png"]] autorelease];
+	UIImageView *graphShadowView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ShadowBottom"]] autorelease];
 	graphShadowView.frame = CGRectMake(0, CGRectGetMaxY(topView.bounds) + 64.0, topView.bounds.size.width, 20);
 	graphShadowView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
 	[topView addSubview:graphShadowView];
@@ -107,8 +107,8 @@
 	productsTableView.delegate = self;
 	productsTableView.backgroundColor = [UIColor clearColor];
 	
-	productsTableView.tableHeaderView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ShadowTop.png"]] autorelease];
-	productsTableView.tableFooterView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ShadowBottom.png"]] autorelease];
+	productsTableView.tableHeaderView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ShadowTop"]] autorelease];
+	productsTableView.tableFooterView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ShadowBottom"]] autorelease];
 	UIEdgeInsets productsTableContentInset = (statusVisible) ? UIEdgeInsetsMake(-20, 0, 24, 0) : UIEdgeInsetsMake(-20, 0, -20, 0);
 	UIEdgeInsets productsTableScrollIndicatorInset = (statusVisible) ? UIEdgeInsetsMake(0, 0, 44, 0) : UIEdgeInsetsMake(0, 0, 0, 0);
 	productsTableView.contentInset = productsTableContentInset;
@@ -118,7 +118,7 @@
 	self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 	[self.view addSubview:self.productsTableView];
 	
-	self.shadowView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ShadowBottom.png"]] autorelease];
+	self.shadowView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ShadowBottom"]] autorelease];
 	shadowView.frame = graphShadowView.frame;
 	shadowView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	shadowView.alpha = 0.0;

@@ -41,8 +41,8 @@
 		[self.contentView addSubview:iconView];
 		[self.contentView addSubview:nameLabel];
 		
-		self.backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellBackground.png"]] autorelease];
-		self.selectedBackgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellBackgroundSelected.png"]] autorelease];
+		self.backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellBackground"]] autorelease];
+		self.selectedBackgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellBackgroundSelected"]] autorelease];
     }
     return self;
 }
@@ -63,7 +63,7 @@
 		colorButton.color = product.color;
 		if (self.product.parentSKU && self.product.parentSKU.length > 1) {
 			iconView.productID = nil;
-			iconView.image = [UIImage imageNamed:@"InApp.png"];
+			iconView.image = [UIImage imageNamed:@"InApp"];
 		} else {
 			iconView.productID = self.product.productID;
 		}

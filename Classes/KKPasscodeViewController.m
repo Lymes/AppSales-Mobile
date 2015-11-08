@@ -205,7 +205,7 @@
 {
 	_enterPasscodeTextField.text = @"";
 	for (int i = 0; i < 4; i++) {
-		[[[_squares objectAtIndex:_tableIndex] objectAtIndex:i] setImage:[UIImage imageNamed:@"passcode_square_empty.png"]];
+		[[[_squares objectAtIndex:_tableIndex] objectAtIndex:i] setImage:[UIImage imageNamed:@"passcode_square_empty"]];
 	}		 
 	
 	_failedAttemptsCount += 1;
@@ -261,7 +261,7 @@
 	newTableView.frame = CGRectMake(oldTableView.frame.origin.x + self.view.bounds.size.width, oldTableView.frame.origin.y, oldTableView.frame.size.width, oldTableView.frame.size.height);
 	
 	for (int i = 0; i < 4; i++) {
-		[[[_squares objectAtIndex:_tableIndex] objectAtIndex:i] setImage:[UIImage imageNamed:@"passcode_square_empty.png"]];
+		[[[_squares objectAtIndex:_tableIndex] objectAtIndex:i] setImage:[UIImage imageNamed:@"passcode_square_empty"]];
 	}
 	
 	[UIView beginAnimations:@"" context:nil];
@@ -283,7 +283,7 @@
 	newTableView.frame = CGRectMake(oldTableView.frame.origin.x - self.view.bounds.size.width, oldTableView.frame.origin.y, oldTableView.frame.size.width, oldTableView.frame.size.height);
 	
 	for (int i = 0; i < 4; i++) {
-		[[[_squares objectAtIndex:_tableIndex] objectAtIndex:i] setImage:[UIImage imageNamed:@"passcode_square_empty.png"]];
+		[[[_squares objectAtIndex:_tableIndex] objectAtIndex:i] setImage:[UIImage imageNamed:@"passcode_square_empty"]];
 	}
 	
 	[UIView beginAnimations:@"" context:nil];
@@ -581,7 +581,7 @@
 	CGFloat squareX = 0.0;
 	
 	for (int i = 0; i < 4; i++) {
-		UIImageView *square = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"passcode_square_empty.png"]];
+		UIImageView *square = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"passcode_square_empty"]];
 		square.frame = CGRectMake(squareX, 74.0, 61.0, 53.0);
 		[squareViews addObject:square];
 		[square release];
@@ -649,9 +649,9 @@
 		for (int i = 0; i < 4; i++) {
 			UIImageView *square = [[_squares objectAtIndex:_tableIndex] objectAtIndex:i];
 			if (i < [result length]) {
-				square.image = [UIImage imageNamed:@"passcode_square_filled.png"];
+				square.image = [UIImage imageNamed:@"passcode_square_filled"];
 			} else {
-				square.image = [UIImage imageNamed:@"passcode_square_empty.png"];
+				square.image = [UIImage imageNamed:@"passcode_square_empty"];
 			}
 		}
 		
@@ -702,7 +702,7 @@
 					if ([passcode isEqualToString:_setPasscodeTextField.text]) {
 						_setPasscodeTextField.text = @"";
 						for (int i = 0; i < 4; i++) {
-							[[[_squares objectAtIndex:_tableIndex] objectAtIndex:i] setImage:[UIImage imageNamed:@"passcode_square_empty.png"]];
+							[[[_squares objectAtIndex:_tableIndex] objectAtIndex:i] setImage:[UIImage imageNamed:@"passcode_square_empty"]];
 						}		 
 						_passcodeConfirmationWarningLabel.text = @"Enter a different passcode. Cannot re-use the same passcode.";
 						_passcodeConfirmationWarningLabel.frame = CGRectMake(0.0, 131.5, self.view.bounds.size.width, 60.0);

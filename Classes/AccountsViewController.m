@@ -200,18 +200,18 @@
 		NSInteger badge = [[[self.accounts objectAtIndex:indexPath.section] reportsBadge] integerValue];
 		cell.textLabel.text = NSLocalizedString(@"Sales and Trends", nil);
 		cell.badgeCount = badge;
-		cell.imageView.image = [UIImage imageNamed:@"Sales.png"];
-		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"Sales.png" color:[UIColor whiteColor]];
+		cell.imageView.image = [UIImage imageNamed:@"Sales"];
+		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"Sales" color:[UIColor whiteColor]];
 	} else if (indexPath.row == 1) {
 		NSInteger badge = [[[self.accounts objectAtIndex:indexPath.section] paymentsBadge] integerValue];
 		cell.textLabel.text = NSLocalizedString(@"Payments", nil);
 		cell.badgeCount = badge;
-		cell.imageView.image = [UIImage imageNamed:@"Payments.png"];
-		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"Payments.png" color:[UIColor whiteColor]];
+		cell.imageView.image = [UIImage imageNamed:@"Payments"];
+		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"Payments" color:[UIColor whiteColor]];
 	} else if (indexPath.row == 2) {
 		cell.textLabel.text = NSLocalizedString(@"Customer Reviews", nil);
-		cell.imageView.image = [UIImage imageNamed:@"Reviews.png"];
-		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"Reviews.png" color:[UIColor whiteColor]];
+		cell.imageView.image = [UIImage imageNamed:@"Reviews"];
+		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"Reviews" color:[UIColor whiteColor]];
 		
 		ASAccount *account = [self.accounts objectAtIndex:indexPath.section];
 		NSFetchRequest *unreadReviewsRequest = [[[NSFetchRequest alloc] init] autorelease];
@@ -220,13 +220,13 @@
 		cell.badgeCount = [[self managedObjectContext] countForFetchRequest:unreadReviewsRequest error:NULL];
 	} else if (indexPath.row == 3) {
 		cell.textLabel.text = NSLocalizedString(@"Promo Codes", nil);
-		cell.imageView.image = [UIImage imageNamed:@"PromoCodes.png"];
-		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"PromoCodes.png" color:[UIColor whiteColor]];
+		cell.imageView.image = [UIImage imageNamed:@"PromoCodes"];
+		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"PromoCodes" color:[UIColor whiteColor]];
 		cell.badgeCount = 0;
 	} else if (indexPath.row == 4) {
 		cell.textLabel.text = NSLocalizedString(@"Account", nil);
-		cell.imageView.image = [UIImage imageNamed:@"Account.png"];
-		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"Account.png" color:[UIColor whiteColor]];
+		cell.imageView.image = [UIImage imageNamed:@"Account"];
+		cell.imageView.highlightedImage = [UIImage as_tintedImageNamed:@"Account" color:[UIColor whiteColor]];
 		cell.badgeCount = 0;
 	}	
 	return cell;

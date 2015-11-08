@@ -27,7 +27,7 @@
 		products = [reviewProducts retain];
 		self.title = NSLocalizedString(@"Reviews", nil);
 		
-		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Check.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(markAllAsRead:)] autorelease];
+		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Check"] style:UIBarButtonItemStyleBordered target:self action:@selector(markAllAsRead:)] autorelease];
 	}
 	return self;
 }
@@ -77,7 +77,7 @@
 	
 	Review *review = [self.fetchedResultsController objectAtIndexPath:indexPath];
 	cell.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
-	cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", review.countryCode]];
+	cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", review.countryCode]];
 	NSString *ratingString = [@"" stringByPaddingToLength:[review.rating integerValue] withString:@"\u2605" startingAtIndex:0];
 	cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", ratingString, [review.product displayName]];
 	cell.textLabel.text = review.title;

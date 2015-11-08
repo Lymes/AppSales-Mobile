@@ -42,7 +42,7 @@
 - (void)iconCleared:(NSNotification *)notification
 {
     if ([[[notification userInfo] objectForKey:kIconManagerClearedIconNotificationAppID] isEqualToString:self.productID]) {
-        self.image = [UIImage imageNamed:@"GenericApp.png"];
+        self.image = [UIImage imageNamed:@"GenericApp"];
     }
 }
 

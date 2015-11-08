@@ -42,7 +42,7 @@
 	self = [super initWithAccount:anAccount];
 	if (self) {
 		self.title = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) ? NSLocalizedString(@"Sales", nil) : [account displayName];
-		self.tabBarItem.image = [UIImage imageNamed:@"Sales.png"];
+		self.tabBarItem.image = [UIImage imageNamed:@"Sales"];
 		
 		sortedDailyReports = [NSMutableArray new];
 		sortedWeeklyReports = [NSMutableArray new];
@@ -717,8 +717,8 @@
 		latestValueButton.titleLabel.font = [UIFont boldSystemFontOfSize:16.0];
 		latestValueButton.titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
 		latestValueButton.titleLabel.shadowOffset = CGSizeMake(0, -1);
-		[latestValueButton setBackgroundImage:[UIImage imageNamed:@"LatestValueButton.png"] forState:UIControlStateNormal];
-		[latestValueButton setBackgroundImage:[UIImage imageNamed:@"LatestValueButton.png"] forState:UIControlStateHighlighted];
+		[latestValueButton setBackgroundImage:[UIImage imageNamed:@"LatestValueButton"] forState:UIControlStateNormal];
+		[latestValueButton setBackgroundImage:[UIImage imageNamed:@"LatestValueButton"] forState:UIControlStateHighlighted];
 		
 		UILongPressGestureRecognizer *longPressRecognizer = [[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(selectAdvancedViewMode:)] autorelease];
 		[latestValueButton addGestureRecognizer:longPressRecognizer];

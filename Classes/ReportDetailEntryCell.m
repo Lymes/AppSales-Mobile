@@ -68,8 +68,8 @@
 		[percentageFormatter setMaximumFractionDigits:1];
 		[percentageFormatter setNumberStyle:NSNumberFormatterPercentStyle];
 		
-		self.backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellBackground.png"]] autorelease];
-		self.selectedBackgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellBackgroundSelected.png"]] autorelease];
+		self.backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellBackground"]] autorelease];
+		self.selectedBackgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellBackgroundSelected"]] autorelease];
 	}
 	return self;
 }
@@ -102,11 +102,11 @@
 	} else {
 		iconView.productID = nil;
 		if (country) {
-			NSString *flagImageName = [NSString stringWithFormat:@"%@.png", [country lowercaseString]];
+			NSString *flagImageName = [NSString stringWithFormat:@"%@", [country lowercaseString]];
 			UIImage *flagImage = [UIImage imageNamed:flagImageName];
 			iconView.image = flagImage;
 		} else {
-			iconView.image = [UIImage imageNamed:@"AllApps.png"];
+			iconView.image = [UIImage imageNamed:@"AllApps"];
 		}
 	}
 	subtitleLabel.text = entry.subtitle;

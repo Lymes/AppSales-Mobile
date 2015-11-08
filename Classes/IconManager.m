@@ -67,7 +67,7 @@
 	}
 	[downloadQueue addObject:appID];
 	[self dequeueDownload];
-	return [UIImage imageNamed:@"GenericApp.png"];
+	return [UIImage imageNamed:@"GenericApp"];
 }
 
 - (void)dequeueDownload
@@ -78,7 +78,7 @@
 	[downloadQueue removeObjectAtIndex:0];
 	
 	dispatch_async(queue, ^ {
-		NSString *iconURLStringPNG = [NSString stringWithFormat:@"http://images.appshopper.com/icons/%@/%@.png", [nextAppID substringToIndex:3], [nextAppID substringFromIndex:3]];
+		NSString *iconURLStringPNG = [NSString stringWithFormat:@"http://images.appshopper.com/icons/%@/%@", [nextAppID substringToIndex:3], [nextAppID substringFromIndex:3]];
 		NSHTTPURLResponse *response = nil;
 		NSError *error = nil;
 		NSData *iconData = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:iconURLStringPNG]] returningResponse:&response error:&error];
